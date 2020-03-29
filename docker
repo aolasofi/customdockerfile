@@ -1,0 +1,8 @@
+Getting base image
+From centos
+
+MAINTAINER Ndumiso Sofika <AzolaSofika@yahoo.com>
+
+RUN dnf update -y && dnf install httpd -y && systemctl enable httpd && dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y && dnf install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y && dnf module enable php:remi-7.4 -y && dnf install php php-cli php-common -y
+
+CMD ["echo" "Welcom to centos PHP server build"]
